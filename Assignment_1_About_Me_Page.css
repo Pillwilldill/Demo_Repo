@@ -5,7 +5,7 @@
      border-style: ridge;
      margin: 0%;
  }
-
+/* Adjust font type for all paragraphs */
   p
  {
      font-family: Arial, Helvetica, sans-serif;
