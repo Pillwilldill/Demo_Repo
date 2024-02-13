@@ -26,14 +26,14 @@ The following **bonus** features are implemented:
 ## Screenshot and/or Video Walkthrough
 
 <img src="https://imgur.com/gallery/4rAXx5x" title='Example Video Walkthrough' width='' alt='Example Video Walkthrough' />
-<img src="CSE_4500_Screenshot_1.png" alt="Screenshot_1">
+<img src="CSE_4500_Screenshot_1.png" title='About_Me_Screenshot' width='' alt='About_Me_Screenshot' />
 
 ## Notes:
 PROVIDE RELEVANT OR ADDITIONAL INFORMATION HERE. Below are formatting options to add emphasis in text
 <ul>
   <p>Use of VS Code with Live Server extension to write code and show output.
      sometimes opened HTML file on new tab as alternative to show output.<p>
-  <p>Difficulty in including screenshot of HTML/CSS code running<p>
+  <p>Difficulty including screenshot of HTML/CSS output<p>
   <p>Border and margins difficult to spot in output unless code was seen beforehand<p>
   <p>Consulted search engine to learn how to type comments in HTML file<p>
   <li>**Example in bold**</li>
