@@ -7,13 +7,13 @@ driver = webdriver.Chrome()
 # take action on browser (navigate to website)
 driver.get("https://www.selenium.dev/selenium/web/web-form.html")
 
-# request information from browser (cookies, window handles, etc)
+# request information from browser (cookies, alerts, window handles, etc)
 title = driver.title
 
-# synchronize code with current state of browser (very difficult)
+# synchronize code with current browser state (very difficult)
 driver.implicitly_wait(0.5)
 
-# find element to interact with most Selenium commands
+# find element to interact with Selenium commands
 text_box = driver.find_element(by=By.NAME, value="my-text")
 submit_button = driver.find_element(by=By.CSS_SELECTOR, value="button")
 
@@ -25,9 +25,8 @@ submit_button.click()
 message = driver.find_element(by=By.ID, value="message")
 text = message.text
 
-# loop to prevent browser from immediately closing
+# while loop to prevent site from closing prematurely
 while True:
     print()
-    
-# end driver process and close browser
+# end session and close browser
 # driver.quit()

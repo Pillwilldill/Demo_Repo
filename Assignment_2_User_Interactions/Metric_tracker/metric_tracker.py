@@ -26,10 +26,11 @@ while True: # presence_time < 50: # seconds
 
     # Track clicks   
     # buttons = driver.find_elements_by_tag_name("button")
+    # num_clicks = 0
 
     # for button in buttons:
-        # button.click()
-        # num_clicks =+ 1
+    #     button.click()
+    #     num_clicks += 1
         
     # print(f"Number of clicks: {num_clicks}")
         
