@@ -35,27 +35,37 @@ def userAction(action, driver, reward_time, req_list)->float:
         num_images = countTagElem(driver, req_list)
         total_reward_time = reward_time * num_images
         time.sleep(total_reward_time)
+    elif action.upper() == "LINK":
+        num_link = countTagElem(driver, "a")
+        total_reward_time = reward_time * num_link
+        time.sleep(total_reward_time)
+        clickLink(driver)
 
     return total_reward_time
 
 # function to click link 
-def clickLink(driver, href):
+def clickLink(driver):
     # find link
-    links = driver.find_elements(By.TAG_NAME, "a")
+    link = driver.find_element(By.TAG_NAME, "a")
     # only clicks first link
-    for link in links:
-        link.click()
+    link.click()
 
 def main():
     driver = webdriver.Chrome()
     driver.get("http://localhost:3000/")
+    # seconds added when user finds keyword, image, and/or link
     reward_time = 10
+    # update total reward time when user detects keyword(s)
     total_reward_time = userAction("KEYWORD", driver, reward_time, ["investing", "CSUSB"])
     tag_name = "img"
+    # update total reward time when user detects an image(s)
     total_reward_time += userAction("IMAGE", driver, reward_time, [tag_name])
-    clickLink(driver)
+    # update total reward time when user detects a link(s)
+    total_reward_time += userAction("LINK", driver, reward_time, [])
+    # clickLink(driver) (does not work)
     driver.quit()
 
+    # add string "seconds" so programmer knows presence time is measured in seconds
     print("Presence Time", total_reward_time,"seconds")
 
 if __name__ == "__main__":
